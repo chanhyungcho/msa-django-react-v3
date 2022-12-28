@@ -21,3 +21,6 @@ export {default as NaverMovieContainer} from "exrc/webcrawler/containers/NaverMo
 
 export {default as SamsungReport} from "exrc/nlp/samsung_report/components/SamsungReport"
 export {default as SamsungReportContainer} from "exrc/nlp/samsung_report/containers/SamsungReportContainer"
+
+export {default as Imdb} from "exrc/nlp/imdb/components/Imdb"
+export {default as ImdbContatiner} from "exrc/nlp/imdb/containers/ImdbContatiner"

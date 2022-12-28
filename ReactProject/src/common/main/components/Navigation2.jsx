@@ -30,6 +30,7 @@ const Navigation2 =() => {
         <Link to = '/mnist'style={{width:60, margin:10}}>Mnist</Link>
         <Link to = '/crawler'style={{width:60, margin:10}}>Crawling</Link>
         <Link to = '/samsung-report'style={{width:60, margin:10}}>samsung-report</Link>
+        <Link to = '/naver-movie-review'style={{width:60, margin:10}}>naver-movie-review</Link>
       </BottomNavigation>
     </Box>
   );
