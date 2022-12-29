@@ -11,7 +11,7 @@ const Navigation2 =() => {
   const [value, setValue] = React.useState(0);
 
   return (
-    <Box sx={{ width: 500 }}>
+    <Box sx={{ width: 800 }}>
       <BottomNavigation
         showlabels
         value={value}
@@ -19,7 +19,7 @@ const Navigation2 =() => {
           setValue(newValue);
         }}
       >
-        <Link to ='/home' style={{width:60, margin:10}}>Home</Link>
+        <Link to ='/home' style={{width:30, margin:10}}>Home</Link>
         <Link to = '/counter'style={{width:60, margin:10}}>Counter</Link>
         <Link to = '/todos'style={{width:60, margin:10}}>Todos</Link>
         <Link to = '/signup'style={{width:60, margin:10}}>Sign UP</Link>
@@ -31,6 +31,7 @@ const Navigation2 =() => {
         <Link to = '/crawler'style={{width:60, margin:10}}>Crawling</Link>
         <Link to = '/samsung-report'style={{width:60, margin:10}}>samsung-report</Link>
         <Link to = '/naver-movie-review'style={{width:60, margin:10}}>naver-movie-review</Link>
+        <Link to = '/user-list'style={{width:60, margin:10}}>user-list</Link>
       </BottomNavigation>
     </Box>
   );

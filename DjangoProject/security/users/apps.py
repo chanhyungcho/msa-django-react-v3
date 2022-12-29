@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class Django1Config(AppConfig):
+class SecurityConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "django1"
+    name = "security.users"

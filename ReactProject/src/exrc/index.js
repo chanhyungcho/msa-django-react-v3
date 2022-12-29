@@ -1,11 +1,7 @@
 export {default as Stroke} from "exrc/stroke/components/Stroke"
 export {default as StrokeContainer} from "exrc/stroke/containers/StrokeContainer"
 
-export {default as Login} from "exrc/auth/login/components/Login"
-export {default as LoginContainer} from "exrc/auth/login/containers/LoginContainer"
 
-export {default as SignUp} from "exrc/auth/signup/components/SignUp"
-export {default as SignUpContainer} from "exrc/auth/signup/containers/SignUpContainer"
 
 export {default as Fashion} from "exrc/dlearn/fashion/components/Fashion"
 export {default as FashionContainer} from "exrc/dlearn/fashion/containers/FashionContainer"

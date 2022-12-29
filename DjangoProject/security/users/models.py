@@ -6,7 +6,7 @@ from django.contrib.auth.base_user import AbstractBaseUser
 
 from django.utils import timezone
 
-class aUser(models.Model):
+class User(models.Model):
     # These fields tie to the roles!
     ADMIN = 1
     MANAGER = 2
@@ -32,9 +32,17 @@ class aUser(models.Model):
     # role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, blank=True, null=True, default=3)
 
     def __str__(self):
-        return f'{self.pk}'
-
+        return f'ID : {self.pk}, \n' \
+               f'이메일 : {self.user_email},\n ' \
+               f'비밀번호 : {self.password},\n ' \
+               f'닉네임 : {self.user_name},\n ' \
+               f'전화번호 : {self.phone},\n ' \
+               f'생년월일 : {self.birth},\n ' \
+               f'주소 : {self.address},\n ' \
+               f'직업 : {self.job},\n ' \
+               f'관심사항 : {self.user_interests},\n ' \
+               f'토큰 : {self.token},\n '
     class Meta:
-        db_table = "ausers"
+        db_table = "users"
         verbose_name = 'user'
         verbose_name_plural = 'users'

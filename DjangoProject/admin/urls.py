@@ -28,7 +28,7 @@ urlpatterns = [
     path('exrc/webcrawler/', include('exrc.webcrawler.navermovie.url')),
     path('exrc/nlp/', include('exrc.nlp.samsung_report.urls')),
     path('exrc/nlp/', include('exrc.nlp.imdb.urls')),
-    path('django1/', include('django1.urls')),
+    path('security/users/', include('security.users.urls')),
 
 
 

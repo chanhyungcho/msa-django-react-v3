@@ -47,7 +47,7 @@ def dir_path(param):
             or (param == "theaters"):
         return os.path.join(root, "multiplex", param)
     elif (param == "users") :
-        return os.path.join(root, "security", param)
+        return os.path.join(root, "security/users", param)
     elif (param == "carts") \
             or (param == "categories") \
             or (param == "deliveries") \

@@ -17,7 +17,7 @@ class UserService(object):
 
     def insert_users(self):
         df = self.create_users()
-        df.to_sql(name='ausers',
+        df.to_sql(name='users',
                   if_exists='append',
                   con=engine,
                   index=False)
@@ -36,21 +36,31 @@ class UserService(object):
         address = random.choice(address_list)
         job = random.choice(job_list)
         user_interests = random.choice(interests_list)
-        return user_email,password,user_name,phone,birth,address,job,user_interests
-
-
+        token = 'JWT fefege..'
+        '''
+        user_email = models.TextField()
+        password = models.CharField(max_length=10)
+        user_name = models.TextField()
+        phone = models.TextField()
+        birth = models.TextField()
+        address = models.TextField(blank=True)
+        job = models.TextField()
+        user_interests = models.TextField()
+        '''
+        return [user_email, password, user_name, phone, birth,
+                address, job, user_interests, token]
 
 
     def create_users(self)->[]:
         rows = [self.create_user() for i in range(100)]
-        columns = ['user_email', 'password', 'user_name', 'phone', 'birth', 'address', 'job', 'user_interests']
+        columns = ['user_email', 'password', 'user_name', 'phone', 'birth', 'address', 'job', 'user_interests', 'token']
         df = pd.DataFrame(rows, columns=columns)
         df['user_email'] = df['user_email'].astype(str)
         return df
 
     def get_users(self)->[]:
-        print('포스트맨 요청이 도달하였음.')
-
+        print(" 포스트맨의 요청이 도달하였음 !! ")
+        pass
 
     def userid_checker(self):  # 아이디 중복체크
         pass
@@ -62,4 +72,4 @@ class UserService(object):
             return df'''
 
 if __name__ == '__main__':
-    UserService().create_users()
+    UserService().insert_users()
